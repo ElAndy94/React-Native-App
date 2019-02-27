@@ -20,6 +20,7 @@ import PlaceList from './src/components/PlaceList/PlaceList';
 class App extends Component {
   placeAddedHandler = placeName => {
     this.props.onAddPlace(placeName);
+    console.log('Place Added', placeName);
   };
 
   placeDeletedHandler = () => {
@@ -55,7 +56,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 26,
+    padding: 30,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start'
