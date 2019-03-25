@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Platform } from 'react-native';
 
 import {
   View,
@@ -32,7 +33,11 @@ class PlaceDetail extends Component {
         <View>
           <TouchableOpacity onPress={this.placeDeletedHandler}>
             <View style={styles.deleteButton}>
-              <Icon name='ios-trash' size={30} color='red' />
+              <Icon
+                size={30}
+                name={Platform.OS === 'android' ? 'md-trash' : 'ios-trash'}
+                color='red'
+              />
             </View>
           </TouchableOpacity>
         </View>
